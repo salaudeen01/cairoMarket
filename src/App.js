@@ -5,19 +5,24 @@ import {
     Switch,
     useHistory
  } from 'react-router-dom'
+import {history} from './history'
+import Nav from './Pages/nav'
+
+ const loading = (
+    <div className="pt-3 text-center">
+      <div className="sk-spinner sk-spinner-pulse"></div>
+    </div>
+  )
 
 export class App extends Component {
     render() {
         // const hello = alert('Hello');
         return (
-            <div className="text-center">
-                {/* { hello } */}
-                <h1>Welcome to <span style={{color:'red'}} className="fa fa-map-marker"> CAIRO-MARKET</span> oshodi.</h1>
-                <div className="row">
-                    <div className="col-sm-6"><span className="btn btn-outline-danger">Search for a products</span></div>
-                    <div className="col-sm-6"><span className="btn btn-outline-success">Marketer login</span></div>
-                </div>
-            </div>
+            <Router history={history}>
+                <React.Suspense fallback={loading}>
+                    <Nav />
+                </React.Suspense>
+            </Router>
         )
     }
 }
