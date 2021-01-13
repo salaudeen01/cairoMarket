@@ -5,6 +5,7 @@ import {
     Switch,
     useHistory
  } from 'react-router-dom'
+ import Header from './Component/Header';
 
 export class App extends Component {
     render() {
@@ -13,10 +14,7 @@ export class App extends Component {
             <div className="text-center">
                 {/* { hello } */}
                 <h1>Welcome to <span style={{color:'red'}} className="fa fa-map-marker"> CAIRO-MARKET</span> oshodi.</h1>
-                <div className="row">
-                    <div className="col-sm-6"><span className="btn btn-outline-danger">Search for a products</span></div>
-                    <div className="col-sm-6"><span className="btn btn-outline-success">Marketer login</span></div>
-                </div>
+                <Header />
             </div>
         )
     }
