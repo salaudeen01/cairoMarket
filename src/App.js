@@ -12,6 +12,7 @@ import Nav from './Pages/nav'
   )
 
 export class App extends Component {
+    
     render() {
         return (
             <Router history={history}>
@@ -22,5 +23,4 @@ export class App extends Component {
         )
     }
 }
-
 export default App
