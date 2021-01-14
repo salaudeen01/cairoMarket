@@ -39,8 +39,8 @@
 .sidebar{
     /* background-color: aliceblue; */
     border-radius: 10px 0px 0px 0px;
-    height: 850px;
-    border: 1px solid #a9a9a9;
+    height: 500px;
+    /* border: 1px solid #a9a9a9; */
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
 }
 .user img{ 
