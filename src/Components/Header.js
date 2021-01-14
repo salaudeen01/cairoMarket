@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header id="site-header" className="header-one">
-            <div className="header-main header-sticky">
+            <div className="header-main header-sticky" style={{background:props.color}} >
                 <div className="container-fluid">
                     <div className="mob-menu-open toggle-menu">
                         <span className="bar"></span>

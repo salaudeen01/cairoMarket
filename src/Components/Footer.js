@@ -16,10 +16,10 @@ const Footer = () => {
                                 </div>
                                 <div className="footer-contact-info">
                                     <ul>
-                                        <li><i className="fas fa-map-marker-alt"></i>34 Street kancas City United States
-                                            area.</li>
+                                        <li><i className="fas fa-map-marker-alt"></i>40b,Seinde calisto str.,Oshodi Lagos
+                                            </li>
                                         <li><i className="fas fa-phone"></i>+123 6669 000</li>
-                                        <li><i className="far fa-envelope"></i>info@listygo.com</li>
+                                        <li><i className="far fa-envelope"></i>www.techend.com.ng</li>
                                     </ul>
                                 </div>
                             </div>
