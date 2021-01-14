@@ -18,7 +18,7 @@ export class Dashboard2 extends Component {
             <div className="container-fluid">
                 <div className="row text-center page">
                     <div className="sidebar col-sm-3">
-                    <h4 className="" style={{color:'gray',marginTop:20}}><span style={{color:'red'}} className="fa fa-map-marker"> C</span>airo-market</h4>
+                        <h4 className="" style={{color:'gray',marginTop:20}}><span style={{color:'red'}} className="fa fa-map-marker"> C</span>airo-market</h4>
                    
                       <div className='user'><span className="badge"><img src={user} alt="users images" /><a href="edit"><i className="fa fa-edit"/></a></span></div>
                       <div className="sidebar-text"><br/>
@@ -130,14 +130,13 @@ export class Dashboard2 extends Component {
                                 </div>
                             </div>
                         </div>
-                        <Footer />
                         {/* <footer>
                             <h5 className="float-left" style={{color:'gray'}}><span style={{color:'red'}} className="fa fa-map-marker"> C</span>airo-market</h5>
                             <h5 className="float-right">Techend inc 3.0</h5>
                         </footer> */}
                     </div>
-
                 </div>
+                <Footer />
                 
             </div>
         )

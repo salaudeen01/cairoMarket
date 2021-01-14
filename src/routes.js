@@ -9,6 +9,8 @@ const Page404 = React.lazy(() => import('./Pages/Page404'));
 const About = React.lazy(() => import('./Pages/About'));
 const Contact = React.lazy(() => import('./Pages/Contact'));
 const profile = React.lazy(() => import('./Pages/Profile'));
+const Blog = React.lazy(() => import('./Pages/Blog'));
+const Event = React.lazy(() => import('./Pages/Event'));
 
 const routes = [
   { path: '/', exact: true, name: 'Landing', layout:"MinimalLayout"},
@@ -20,7 +22,9 @@ const routes = [
   { path: '/page404', name: 'Page404', component: Page404, layout:"MinimalLayout" },
   { path: '/about', name: 'About', component: About, layout:"MinimalLayout" },
   { path: '/contact', name: 'Contact', component: Contact, layout:"MinimalLayout" },
-  { path: '/profile', name: 'profile', component: profile, layout:"MainLayout"}
+  { path: '/profile', name: 'profile', component: profile, layout:"MainLayout"},
+  { path: '/blog', name: 'Blog', component: Blog, layout:"MinimalLayout" },
+  { path: '/events', name: 'Event', component: Event, layout:"MinimalLayout" },
 ];
 
 export default routes;

@@ -1,4 +1,5 @@
 import React from 'react'
+import jago from './image/loi.png'
 
 const Footer = () => {
     return (
@@ -9,7 +10,7 @@ const Footer = () => {
                         <div className="single-item col-lg-3 col-md-6 col-12">
                             <div className="footer-box">
                                 <div className="footer-logo">
-                                    <a href="index.html"><img src="/assets/img/footer-logo.png" className="img-fluid" alt="footer-logo" /></a>
+                                    <a href="index.html"><img src={jago} className="img-fluid" alt="footer-logo" /></a>
                                 </div>
                                 <div className="footer-about">
                                     <p>Use the Upwork platform chat ande your desktop metro.</p>
