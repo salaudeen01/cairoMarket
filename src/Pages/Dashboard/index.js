@@ -10,6 +10,7 @@ import img5 from '../../images/img5.jpg'
 import img6 from '../../images/img6.jpg'
 import img7 from '../../images/img7.jpg'
 import img8 from '../../images/img8.jpg'
+import Footer from '../../Components/Footer'
 
 export class Dashboard2 extends Component {
     render() {
@@ -27,21 +28,14 @@ export class Dashboard2 extends Component {
                         <h5>CEO @Tristack inc.</h5>
                         
                         <span className="btn btn-outline-primary ">Edit profile</span>
-                        {/* <br/> */}
                         <hr/>
-                            <h3>Contacts:</h3>
+                        <h3>Contacts:</h3>
                         <h6><a href="mailto:#"><span className="fa fa-envelope" /> williamsBlonde@gmail</a></h6>
                         <h6><a href="tel:#"><span className="fa fa-phone" />  +2347063205787</a></h6>
                         <h5><span className="fa fa-map-marker" />  19 olasoji ln cairo market oshoji isolo lagos.</h5>
                         <br/>
                         <div className="sidebar-social">
-                            {/* <h5>Personal linkup</h5>
-                            <br/>
-                        <a className="py-3 px-3" style={{fontSize:20}} href="https://facebook.com"><i className="fa fa-facebook"/></a>
-                        <a className="py-3 px-3" style={{fontSize:20}} href="https://wa.me.com"><i className="fa fa-whatsapp"/></a>
-                        <a className="py-3 px-3" style={{fontSize:20}} href="https://github.com"><i className="fa fa-github"/></a>
-                            */}
-                      <hr/> 
+                        <hr/> 
                         <h5>Organisation linkup</h5>
                             <br/>
                         <h6>Website <span className="fa fa-link" />:<a href="https://tristack.net"> Tristack.inc.org</a></h6>
@@ -65,31 +59,20 @@ export class Dashboard2 extends Component {
                                 </ul>
                             </div>
                         </div>
-                   
-                            <hr/>
-
+                        <hr/>
                         <h3>About <span className="fa fa-info"/></h3>
-                       <h5>Tristack inc is an organisation that is specialized in computer science and technology initialization and installation.</h5>
+                        <h5>Tristack inc is an organisation that is specialized in computer science and technology initialization and installation.</h5>
                        
                             <h3>What we do</h3>
                             <div className="row lists">
-                                    <div className="">
-                                        <h5>web design and development <span className="fa fa-laptop"/></h5>
-                                        <h5>Graphics and logo design <span className="fa fa-paint-brush"/></h5>
-                                        <h5>UI/UX design <span className="fa fa-desktop"/></h5>
-                                        <h5>Social media marketing <span className="fa fa-mobile"/></h5>
-                                        <hr/>
-                                        {/* <div className="row">
-                                            <div className="col-sm-"></div>
-                                        </div> */}
-                                        {/* <span className="btn btn-outline-info float-left">Read more..</span> */}
-                                        <span className="btn btn-outline-info">Add more</span>
-                                    </div>
-                               
-                               
-                                    {/* <div className=" card">
-                                    </div> */}
-                               
+                                <div className="">
+                                    <h5>web design and development <span className="fa fa-laptop"/></h5>
+                                    <h5>Graphics and logo design <span className="fa fa-paint-brush"/></h5>
+                                    <h5>UI/UX design <span className="fa fa-desktop"/></h5>
+                                    <h5>Social media marketing <span className="fa fa-mobile"/></h5>
+                                    <hr/>
+                                    <span className="btn btn-outline-info">Add more</span>
+                                </div>
                             </div>
                             <hr/>
                             <div className="row">
@@ -123,35 +106,35 @@ export class Dashboard2 extends Component {
                         <br/><br/>
                         <div className="row">
                         <div className="col-sm-3">
-                                    <div className="img-card">
-                                        <img src={img5} alt="image5"/>
-                                        <h6 style={{marginTop:10}}>Project card</h6>
-                                    </div>
+                            <div className="img-card">
+                                <img src={img5} alt="image5"/>
+                                <h6 style={{marginTop:10}}>Project card</h6>
+                            </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="img-card">
+                                    <img src={img6} alt="image6"/>
+                                    <h6 style={{marginTop:10}}>Project card</h6>
                                 </div>
-                                <div className="col-sm-3">
-                                    <div className="img-card">
-                                        <img src={img6} alt="image6"/>
-                                        <h6 style={{marginTop:10}}>Project card</h6>
-                                    </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="img-card">
+                                    <img src={img7} alt="image7"/>
+                                    <h6 style={{marginTop:10}}>Project card</h6>
                                 </div>
-                                <div className="col-sm-3">
-                                    <div className="img-card">
-                                        <img src={img7} alt="image7"/>
-                                        <h6 style={{marginTop:10}}>Project card</h6>
-                                    </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="img-card">
+                                    <img src={img8} alt="image8"/>
+                                    <h6 style={{marginTop:10}}>Project card</h6>
                                 </div>
-                                <div className="col-sm-3">
-                                    <div className="img-card">
-                                        <img src={img8} alt="image8"/>
-                                        <h6 style={{marginTop:10}}>Project card</h6>
-                                    </div>
-                                </div>
+                            </div>
                         </div>
-                        <hr/>
-                        <footer>
-                    <h5 className="float-left" style={{color:'gray'}}><span style={{color:'red'}} className="fa fa-map-marker"> C</span>airo-market</h5>
-                    <h5 className="float-right">Techend inc 3.0</h5>
-                        </footer>
+                        <Footer />
+                        {/* <footer>
+                            <h5 className="float-left" style={{color:'gray'}}><span style={{color:'red'}} className="fa fa-map-marker"> C</span>airo-market</h5>
+                            <h5 className="float-right">Techend inc 3.0</h5>
+                        </footer> */}
                     </div>
 
                 </div>

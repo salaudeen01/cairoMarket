@@ -10,7 +10,7 @@ import img6 from '../images/img6.jpg'
 import img7 from '../images/img7.jpg'
 import img8 from '../images/img8.jpg'
 import img9 from '../images/bg3.png'
-
+import Footer from '../../Components/Footer'
 
 export class Dashboard extends Component {
     render() {
@@ -137,33 +137,23 @@ export class Dashboard extends Component {
 
                         <h3>What we do</h3>
                             <ul className="float-left">
-                                        <li>web design and development <span className="fa fa-laptop"/></li>
-                                        <li>Graphics and logo design <span className="fa fa-paint-brush"/></li>
-                                        <li>UI/UX design <span className="fa fa-desktop"/></li>
-                                        <li>Social media marketing <span className="fa fa-mobile"/></li>
-                                        <hr/>
-                                        {/* <div className="row">
-                                            <div className="col-sm-"></div>
-                                        </div> */}
-                                        <span className="btn btn-outline-info float-left">Read more..</span>
-                                        <span className="btn btn-outline-danger float-right">Edit profile</span>
-                                    </ul>
-                                    {/* <br/>
-                                    <div className=" card">
-                                        <h3 style={{color:'lime',marginTop:10}}>SALES PROMO <span className="fa fa-smile-o"/></h3>
-                                        <h1 style={{color:'red'}}>30% off</h1>
-                                        <marquee><h4 style={{color:'#a9a9a9'}}><span className="fa fa-gift"/> Season greetings.</h4></marquee>
-                                    </div> */}
+                                <li>web design and development <span className="fa fa-laptop"/></li>
+                                <li>Graphics and logo design <span className="fa fa-paint-brush"/></li>
+                                <li>UI/UX design <span className="fa fa-desktop"/></li>
+                                <li>Social media marketing <span className="fa fa-mobile"/></li>
+                                <hr/>
+                                <span className="btn btn-outline-info float-left">Read more..</span>
+                                <span className="btn btn-outline-danger float-right">Edit profile</span>
+                            </ul>
                         </div>
                     </div>
-                        <hr/>
-                    
-
-                    <footer>
+                    <hr/>
+                    <Footer />
+                    {/* <footer>
                     <h5 className="float-left" style={{color:'gray'}}><span style={{color:'red'}} className="fa fa-map-marker"> C</span>airo-market</h5>
                     <h5 className="float-right">Techend inc 3.0</h5>
                     </footer> 
-              <br/><br/>
+              <br/><br/> */}
             </div>
         )
     }
