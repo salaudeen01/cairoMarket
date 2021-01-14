@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component,Suspense } from 'react'
 import { 
-    Route,
     Router,
-    Switch,
-    useHistory
- } from 'react-router-dom'
+    } from 'react-router-dom'
 import {history} from './history'
 import Nav from './Pages/nav'
 
@@ -16,12 +13,11 @@ import Nav from './Pages/nav'
 
 export class App extends Component {
     render() {
-        // const hello = alert('Hello');
         return (
             <Router history={history}>
-                <React.Suspense fallback={loading}>
+                <Suspense fallback={loading}>
                     <Nav />
-                </React.Suspense>
+                </Suspense>
             </Router>
         )
     }
