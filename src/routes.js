@@ -8,6 +8,7 @@ const ForgotPassword = React.lazy(() => import('./Pages/ForgotPassword'));
 const Page404 = React.lazy(() => import('./Pages/Page404'));
 const About = React.lazy(() => import('./Pages/About'));
 const Contact = React.lazy(() => import('./Pages/Contact'));
+const profile = React.lazy(() => import('./Pages/Profile'));
 
 const routes = [
   { path: '/', exact: true, name: 'Landing', layout:"MinimalLayout"},
@@ -19,6 +20,7 @@ const routes = [
   { path: '/page404', name: 'Page404', component: Page404, layout:"MinimalLayout" },
   { path: '/about', name: 'About', component: About, layout:"MinimalLayout" },
   { path: '/contact', name: 'Contact', component: Contact, layout:"MinimalLayout" },
+  { path: '/profile', name: 'profile', component: profile, layout:"MainLayout"}
 ];
 
 export default routes;
