@@ -1,11 +1,12 @@
 import React from 'react'
+import Register from './register'
 
-const Register = () => {
+const index = () => {
     return (
         <div>
-            Hello register
+           <Register />
         </div>
     )
 }
 
-export default Register
+export default index
