@@ -1,4 +1,5 @@
 import React from 'react'
+import jago from './image/loi.png'
 
 const Footer = () => {
     return (
@@ -9,17 +10,17 @@ const Footer = () => {
                         <div className="single-item col-lg-3 col-md-6 col-12">
                             <div className="footer-box">
                                 <div className="footer-logo">
-                                    <a href="index.html"><img src="/assets/img/footer-logo.png" className="img-fluid" alt="footer-logo" /></a>
+                                    <a href="index.html"><img src={jago} className="img-fluid" alt="footer-logo" /></a>
                                 </div>
                                 <div className="footer-about">
                                     <p>Use the Upwork platform chat ande your desktop metro.</p>
                                 </div>
                                 <div className="footer-contact-info">
                                     <ul>
-                                        <li><i className="fas fa-map-marker-alt"></i>34 Street kancas City United States
-                                            area.</li>
+                                        <li><i className="fas fa-map-marker-alt"></i>40b,Seinde calisto str.,Oshodi Lagos
+                                            </li>
                                         <li><i className="fas fa-phone"></i>+123 6669 000</li>
-                                        <li><i className="far fa-envelope"></i>info@listygo.com</li>
+                                        <li><i className="far fa-envelope"></i>www.techend.com.ng</li>
                                     </ul>
                                 </div>
                             </div>

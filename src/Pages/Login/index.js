@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './css/style.css'
 import Login from '../Login/Login'
 import bg from '../Login/images/wave.png'
-import av from '../Login/images/avatar.png'
+import av from '../Login/images/avatar.svg'
 import al from '../Login/images/bg.svg'
 import {Link} from 'react-router-dom'
 
