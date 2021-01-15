@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './register.css'
 
  class Register extends Component {
     render() {
