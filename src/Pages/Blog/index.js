@@ -7,7 +7,7 @@ import Listbg from './Listbg'
 const index = () => {
     return (
         <div>
-            <Header />
+            <Header color="black" />
             <Banner />
             <Listbg />
             <Footer />

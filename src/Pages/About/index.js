@@ -9,7 +9,7 @@ import TeamCarousel from './TeamCarousel'
 const About = () => {
     return (
         <div>
-            <Header />
+            <Header color="black" />
             <AboutBanner />
             <AboutContent />
             <ListingBanner />
