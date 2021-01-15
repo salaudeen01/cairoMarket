@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #efefef;
+    font-size: 16px;
+    color: #777;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+    #login-box{
+        position: relative;
+        margin: 5% auto;
+        height: 400px;
+        background: #ffff;
+        width: 600px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+.right-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    background-color: brown;
+    background-size: cover;
+    background-position: center ;
+}
+.right-box .signinwith{
+    display: block;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color:#a9a9a9;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+button.social{
+    margin-bottom: 20px;
+    width: 220px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.facebook{
+    background: #32508e;
+}
+.twitter{
+    background: #55acee;
+}
+.google{
+    background: #dd4b39;
+}
