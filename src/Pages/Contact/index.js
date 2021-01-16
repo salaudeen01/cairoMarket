@@ -20,7 +20,7 @@ const Contact = () => {
                             <h1>Contact With Us</h1>
                             <ul>
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="/landing">Home</a>
                                 </li>
                                 <li>Contact</li>
                             </ul>

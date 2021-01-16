@@ -11,7 +11,7 @@ const Banner = () => {
                             <h1>Our Latest Blog Grid</h1>
                             <ul>
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="/landing">Home</a>
                                 </li>
                                 <li>Blog</li>
                             </ul>
