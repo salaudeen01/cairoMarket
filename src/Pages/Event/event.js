@@ -27,7 +27,7 @@ const event = () => {
                             <h1>Our All Events</h1>
                             <ul>
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="/landing">Home</a>
                                 </li>
                                 <li>All Events</li>
                             </ul>

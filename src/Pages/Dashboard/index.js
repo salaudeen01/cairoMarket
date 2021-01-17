@@ -11,10 +11,33 @@ import img6 from '../../images/img6.jpg'
 import img7 from '../../images/img7.jpg'
 import img8 from '../../images/img8.jpg'
 import Footer from '../../Components/Footer'
+import Header from '../../Components/Header'
 
 export class Dashboard2 extends Component {
     render() {
         return (
+            <div>
+                <Header color="black" />
+                 {/* Inne Page Banner Area Start Here  */}
+        <section className="inner-page-banner bg-common inner-page-top-margin overlay-dark-40" data-bg-image="img/figure/inner-page-banner1.jpg">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="breadcrumbs-area">
+                            <h1>Dashboard</h1>
+                            <ul>
+                                <li>
+                                    <a href="/landing">Home</a>
+                                </li>
+                                <li>dashboard</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         {/* Inne Page Banner Area End Here  */}
+         {/* Event area starts here */}
             <div className="container-fluid">
                 <div className="row text-center page">
                     <div className="sidebar col-sm-3">
@@ -27,7 +50,7 @@ export class Dashboard2 extends Component {
                         <h5>fullstack web developer,</h5>
                         <h5>CEO @Tristack inc.</h5>
                         
-                        <span className="btn btn-outline-primary ">Edit profile</span>
+                        <Link to ="/profile"><span className="btn btn-outline-primary ">Edit profile</span></Link>
                         <hr/>
                         <h3>Contacts:</h3>
                         <h6><a href="mailto:#"><span className="fa fa-envelope" /> williamsBlonde@gmail</a></h6>
@@ -130,14 +153,15 @@ export class Dashboard2 extends Component {
                                 </div>
                             </div>
                         </div>
+                        {/* event area ends here */}
                         {/* <footer>
                             <h5 className="float-left" style={{color:'gray'}}><span style={{color:'red'}} className="fa fa-map-marker"> C</span>airo-market</h5>
                             <h5 className="float-right">Techend inc 3.0</h5>
                         </footer> */}
                     </div>
                 </div>
+                </div>
                 <Footer />
-                
             </div>
         )
     }

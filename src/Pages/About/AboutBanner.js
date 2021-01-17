@@ -13,7 +13,7 @@ const AboutBanner = () =>{
                                     <h1>About Us</h1>
                                     <ul>
                                         <li>
-                                            <a href="index.html">Home</a>
+                                            <a href="/landing">Home</a>
                                         </li>
                                         <li>About</li>
                                     </ul>

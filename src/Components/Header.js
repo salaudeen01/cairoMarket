@@ -29,16 +29,9 @@ const Header = (props) => {
                                 <div className="col-lg-7 col-12 possition-static">
                                     <nav className="site-nav">
                                         <ul className="site-menu">
-                                            <li><Link to="/dashboard">Home</Link></li>
-                                            <li><Link to="#">Events</Link>
-                                                <ul class="dropdown-menu-col-1">
-                                                    <li><Link to ="/event">Event</Link>
-                                                    <li><Link to ="/eventdetails">Event Details</Link>
-                                                    </li>
-
-                                                    </li>
-                                                </ul>
-                                            </li>
+                                            <li><Link to="/landing">Home</Link></li>
+                                            <li><Link to ="/dashboard">Dashboard</Link></li>
+                                            <li><Link to="/event">Event</Link> </li>
                                             <li><Link to="/blog">Blog</Link></li>
                                             <li><Link to="/about">About</Link></li>
                                             <li><Link to="/contact">Contact</Link></li>
