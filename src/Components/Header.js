@@ -30,7 +30,15 @@ const Header = (props) => {
                                     <nav className="site-nav">
                                         <ul className="site-menu">
                                             <li><Link to="/dashboard">Home</Link></li>
-                                            <li><Link to="/events">Events</Link></li>
+                                            <li><Link to="#">Events</Link>
+                                                <ul class="dropdown-menu-col-1">
+                                                    <li><Link to ="/event">Event</Link>
+                                                    <li><Link to ="/eventdetails">Event Details</Link>
+                                                    </li>
+
+                                                    </li>
+                                                </ul>
+                                            </li>
                                             <li><Link to="/blog">Blog</Link></li>
                                             <li><Link to="/about">About</Link></li>
                                             <li><Link to="/contact">Contact</Link></li>

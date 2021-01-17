@@ -10,7 +10,8 @@ const About = React.lazy(() => import('./Pages/About'));
 const Contact = React.lazy(() => import('./Pages/Contact'));
 const profile = React.lazy(() => import('./Pages/Profile'));
 const Blog = React.lazy(() => import('./Pages/Blog'));
-const Event = React.lazy(() => import('./Pages/Event'));
+const event = React.lazy(() => import('./Pages/Event/event'));
+const eventdetails = React.lazy(() => import('./Pages/Event/eventdetails'))
 
 const routes = [
   { path: '/', exact: true, name: 'Landing', layout:"MinimalLayout"},
@@ -24,7 +25,8 @@ const routes = [
   { path: '/contact', name: 'Contact', component: Contact, layout:"MinimalLayout" },
   { path: '/profile', name: 'profile', component: profile, layout:"MainLayout"},
   { path: '/blog', name: 'Blog', component: Blog, layout:"MinimalLayout" },
-  { path: '/events', name: 'Event', component: Event, layout:"MinimalLayout" },
+  {path: '/event', name:'event', component: event, layout:"MinimalLayout"},
+  {path: '/eventdetails', name:'eventdetails', component:eventdetails, layout:"MinimalLayout"}
 ];
 
 export default routes;

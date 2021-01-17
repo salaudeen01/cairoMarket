@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '.././css/dashboard.css'
+import '../../css/dashboard.css'
 import user from '../images/user.jpg'
 import img1 from '../images/img1.jpg'
 import img2 from '../images/img2.jpg'
