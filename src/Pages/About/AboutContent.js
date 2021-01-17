@@ -27,7 +27,7 @@ const AboutContent = () =>{
                                 </div>
                                 <div className="col-lg-6 col-12">
                                     <div className="about-box-layout2">
-                                    <img src="img/figure/video-bg1.jpg" alt="video"/>
+                                    <img src="/assets/img/figure/video-bg1.jpg" alt="video"/>
                                         <a className="play-btn popup-youtube" href="http://www.youtube.com/watch?v=1iIZeIy7TqM">
                                             <i className="fas fa-play"></i>
                                         </a>

@@ -3,7 +3,7 @@ import den from './image/domli.png'
 
 const Banner = () => {
     return (
-        <section className="main-banner-wrap-layout1 bg-common overlay-dark-40 bg--gradient-top-30" data-bg-image="/assets/img/figure/site-main-figure1.jpg">
+        <section class="inner-page-banner bg-common inner-page-top-margin overlay-dark-40" data-bg-image="img/figure/inner-page-banner1.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-12">

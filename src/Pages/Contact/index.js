@@ -6,6 +6,8 @@ import brand2 from '../../Assets/brand2.png'
 import brand3 from '../../Assets/brand3.png'
 import brand4 from '../../Assets/brand4.png'
 import brand5 from '../../Assets/brand5.png'
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
 
 const Contact = () => {
     return (
@@ -83,7 +85,7 @@ const Contact = () => {
           {/* Brand Area Start Here  */}
         <section class="brand-wrap-layout1 bg--light padding-top-9p6 padding-bottom-7">
             <div class="container">
-                <div class="rc-carousel" data-loop="true" data-items="6" data-margin="30" data-autoplay="true"
+                <div class="rc-carousel owl-carousel owl-theme" data-loop="true" data-items="6" data-margin="30" data-autoplay="true"
                     data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="false" data-nav="false"
                     data-nav-speed="false" data-r-x-small="2" data-r-x-small-nav="false" data-r-x-small-dots="false"
                     data-r-x-medium="3" data-r-x-medium-nav="false" data-r-x-medium-dots="false" data-r-small="4"

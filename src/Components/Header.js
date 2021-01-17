@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import jago from './image/loi.png'
 
 const Header = (props) => {
     return (
@@ -21,7 +22,7 @@ const Header = (props) => {
                             <div className="row">
                                 <div className="col-lg-2 col-12">
                                     <div className="site-logo">
-                                        <a href="index.html" className="main-logo"><img src="/assets/img/logo.png" alt="Site Logo" /></a>
+                                        <a href="index.html" className="main-logo"><img src={jago} className="img-fluid" alt="site logo" /></a>
                                         <a href="index.html" className="sticky-logo"><img src="/assets/img/sticky-logo.png" alt="Site Logo" /></a>
                                     </div>
                                 </div>
