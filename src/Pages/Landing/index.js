@@ -5,9 +5,10 @@ import Banner from './Banner'
 import Blog from './Blog'
 import Category from './Category'
 import Discover from './Discover'
-import Event from './Event'
-import Feature from './Feature'
-import Testimonial from './Testimonial'
+import {Link} from 'react-router-dom'
+// import Event from './Event'
+// import Feature from './Feature'
+// import Testimonial from './Testimonial'
 
 const Landing = () => {
     return (
@@ -18,11 +19,11 @@ const Landing = () => {
             <div id="wrapper" className="wrapper">
                 <Header />
                 <Banner />
-                <Feature />
-                <Category />
+                {/* <Feature /> */}
                 <Discover />
-                <Event />
-                <Testimonial />
+                <Category />
+                {/* <Event /> */}
+                {/* <Testimonial /> */}
                 <Blog />
                 <Footer />
             </div>
@@ -42,20 +43,20 @@ const Landing = () => {
                                         <input id="checkbox1" type="checkbox" />
                                         <label htmlFor="checkbox1">Remember Me</label>
                                     </div>
-                                    <label className="lost-password"><a href="#">Lost your password?</a></label>
+                                    <label className="lost-password"><Link to="#">Lost your password?</Link></label>
                                 </div>
                                 <div className="inline-box mb-5 mt-4">
                                     <button className="btn-fill" type="submit" value="Login">Login</button>
-                                    <a href="#" className="btn-register"><i className="fas fa-user"></i>Register Here!</a>
+                                    <Link to="#" className="btn-register"><i className="fas fa-user"></i>Register Here!</Link>
                                 </div>
                             </form>
                             <label>Login connect with your Social Network</label>
                             <div className="login-box-social">
                                 <ul>
-                                    <li><a href="#" className="facebook"><i className="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" className="twitter"><i className="fab fa-twitter"></i></a></li>
-                                    <li><a href="#" className="linkedin"><i className="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#" className="google"><i className="fab fa-google-plus-g"></i></a></li>
+                                    <li><Link to="#" className="facebook"><i className="fab fa-facebook-f"></i></Link></li>
+                                    <li><Link to="#" className="twitter"><i className="fab fa-twitter"></i></Link></li>
+                                    <li><Link to="#" className="linkedin"><i className="fab fa-linkedin-in"></i></Link></li>
+                                    <li><Link to="#" className="google"><i className="fab fa-google-plus-g"></i></Link></li>
                                 </ul>
                             </div>
                         </div>

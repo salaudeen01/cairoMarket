@@ -16,6 +16,7 @@ body{
 	height: 100%;
 	z-index: -1;
 }
+
 .containerx{
     width: 100vw;
     height: 100vh;
@@ -25,39 +26,39 @@ body{
     padding: 0 2rem;
 }
 
-.imgx{
+.img{
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
 
-.login-contentx{
+.login-content{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
 }
 
-.imgx img{
+.img img{
 	width: 500px;
 }
 
-.fx{
+form{
 	width: 360px;
 }
 
-.login-contentx img{
+.login-content img{
     height: 100px;
 }
 
-.login-contentx h2{
+.login-content h2{
 	margin: 15px 0;
 	color: #333;
 	text-transform: uppercase;
 	font-size: 2.9rem;
 }
 
-.login-contentx .inputx-divx{
+.login-content .input-div{
 	position: relative;
     display: grid;
     grid-template-columns: 7% 93%;
@@ -66,27 +67,27 @@ body{
     border-bottom: 2px solid #d9d9d9;
 }
 
-.login-contentx .inputx-divx.onex{
+.login-content .input-div.one{
 	margin-top: 0;
 }
 
-.ix{
+.i{
 	color: #d9d9d9;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.ix i{
+.i i{
 	transition: .3s;
 }
 
-.inputx-divx > div{
+.input-div > div{
     position: relative;
 	height: 45px;
 }
 
-.inputx-divx > div > h5{
+.input-div > div > h5{
 	position: absolute;
 	left: 10px;
 	top: 50%;
@@ -96,7 +97,7 @@ body{
 	transition: .3s;
 }
 
-.inputx-divx:before, .inputx-divx:after{
+.input-div:before, .input-div:after{
 	content: '';
 	position: absolute;
 	bottom: -2px;
@@ -106,28 +107,28 @@ body{
 	transition: .4s;
 }
 
-.inputx-divx:before{
+.input-div:before{
 	right: 50%;
 }
 
-.inputx-divx:after{
+.input-div:after{
 	left: 50%;
 }
 
-.inputx-divx.focus:before, .inputx-divx.focus:after{
+.input-div.focus:before, .input-div.focus:after{
 	width: 50%;
 }
 
-.inputx-divx.focus > div > h5{
+.input-div.focus > div > h5{
 	top: -5px;
 	font-size: 15px;
 }
 
-.inputx-divx.focus > .i > i{
+.input-div.focus > .i > i{
 	color: #38d39f;
 }
 
-.inputx-divx > div > input{
+.input-div > div > input{
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -142,7 +143,7 @@ body{
 	font-family: 'poppins', sans-serif;
 }
 
-.inputx-divx.pass{
+.input-div.pass{
 	margin-bottom: 4px;
 }
 
@@ -159,7 +160,7 @@ a:hover{
 	color: #38d39f;
 }
 
-.btnn{
+.btn{
 	display: block;
 	width: 100%;
 	height: 50px;
@@ -182,7 +183,7 @@ a:hover{
 
 
 @media screen and (max-width: 1050px){
-	.containerx{
+	.container{
 		grid-gap: 5rem;
 	}
 }
@@ -197,17 +198,17 @@ a:hover{
         margin: 8px 0;
 	}
 
-	.imgx img{
+	.img img{
 		width: 400px;
 	}
 }
 
 @media screen and (max-width: 900px){
-	.containerx{
+	.container{
 		grid-template-columns: 1fr;
 	}
 
-	.imgx{
+	.img{
 		display: none;
 	}
 
@@ -215,13 +216,7 @@ a:hover{
 		display: none;
 	}
 
-	.login-contentx{
+	.login-content{
 		justify-content: center;
 	}
-}
-.eye{
-	position: absolute;
-}
-#hide1{
-	display: none;
 }

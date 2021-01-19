@@ -1,5 +1,6 @@
 import React from 'react'
 import jago from './image/loi.png'
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -11,9 +12,6 @@ const Footer = () => {
                             <div className="footer-box">
                                 <div className="footer-logo">
                                     <a href="index.html"><img src={jago} className="img-fluid" alt="footer-logo" /></a>
-                                </div>
-                                <div className="footer-about">
-                                    <p>Use the Upwork platform chat ande your desktop metro.</p>
                                 </div>
                                 <div className="footer-contact-info">
                                     <ul>
@@ -32,11 +30,11 @@ const Footer = () => {
                                 </div>
                                 <div className="widget_nav_menu">
                                     <ul>
-                                        <li><a href="https://www.radiustheme.com/demo/html/listygo/listygo/single-departments.html">Hotel</a></li>
-                                        <li><a href="https://www.radiustheme.com/demo/html/listygo/listygo/single-departments.html">Restaurant</a></li>
-                                        <li><a href="https://www.radiustheme.com/demo/html/listygo/listygo/single-departments.html">Appartment</a></li>
-                                        <li><a href="https://www.radiustheme.com/demo/html/listygo/listygo/single-departments.html">SPA &amp; Beauty</a></li>
-                                        <li><a href="https://www.radiustheme.com/demo/html/listygo/listygo/single-departments.html">Atuomation</a></li>
+                                        <li><Link to="https://www.radiustheme.com/demo/html/listygo/listygo/single-departments.html">Gadgets</Link></li>
+                                        <li><Link to="https://www.radiustheme.com/demo/html/listygo/listygo/single-departments.html">Clothings</Link></li>
+                                        <li><Link to="https://www.radiustheme.com/demo/html/listygo/listygo/single-departments.html">footwears</Link></li>
+                                        <li><Link to="https://www.radiustheme.com/demo/html/listygo/listygo/single-departments.html">Jewelleries</Link></li>
+                                        <li><Link to="https://www.radiustheme.com/demo/html/listygo/listygo/single-departments.html">Automation</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -48,10 +46,7 @@ const Footer = () => {
                                 </div>
                                 <div className="widget_nav_menu">
                                     <ul>
-                                        <li><a href="about-us.html">Live Chat</a></li>
-                                        <li><a href="about-us.html">FAQ</a></li>
-                                        <li><a href="faq.html">Stay safe</a></li>
-                                        <li><a href="https://www.radiustheme.com/demo/html/listygo/listygo/appointment.html">Contact us</a></li>
+                                        <li><Link to="/contact">Contact us</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -63,24 +58,12 @@ const Footer = () => {
                                 </div>
                                 <div className="footer-social">
                                     <ul>
-                                        <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i className="fab fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i className="fab fa-skype"></i></a></li>
+                                        <li><Link to="#"><i className="fab fa-facebook-f"></i></Link></li>
+                                        <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
+                                        <li><Link to="#"><i className="fab fa-instagram"></i></Link></li>
                                     </ul>
                                 </div>
                                 <ul className="folow-us">
-                                    <li>
-                                        <a href="#">
-                                            <img src="/assets/img/figure/follow1.jpg" alt="follow" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="/assets/img/figure/follow2.jpg" alt="follow" />
-                                        </a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -89,7 +72,6 @@ const Footer = () => {
             </section>
             <section className="footer-bottom-wrap">
                 <div className="container">
-                    <div className="copyright">2018 Copyright © listygo.com</div>
                 </div>
             </section>
         </footer>
