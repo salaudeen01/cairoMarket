@@ -29,28 +29,28 @@ export class Index extends Component {
 		 });
 		return (
 		<div>	
-			<img className="wavex" src={bg} alt=".."/>
-			<div className="containerx">
-				<div className="imgx">
+			<img className="wave" src={bg} alt=".."/>
+			<div className="container">
+				<div className="img">
 					<img src={al} alt=".."/>
 				</div>
-				<div className="login-contentx">
-					<form className="fx" action="index.js">
+				<div className="login-content">
+					<form  action="index.js">
 						<img className="avatar" src={av} alt=".."/>
 						<h2>Welcome</h2>
-						<div className="inputx-divx onex">
-						<div className="ix">
+						<div className="input-div one">
+						<div className="i">
 								<i className="fas fa-envelope"></i>
 						</div>
-						<div className="divx">
+						<div className="div">
 						<input className="form-control border-top-0 border-left-0 border-right-0" type="email" placeholder="Email" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
 						</div>
 						</div>
-						<div className="inputx-divx pass">
-						<div className="ix"> 
+						<div className="input-div pass">
+						<div className="i"> 
 								<i className="fas fa-lock"></i>
 						</div>
-						<div className="divx">
+						<div className="div">
 						<input className="form-control border-top-0 border-left-0 border-right-0" type="password" placeholder="password" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
 						</div>
 						</div>

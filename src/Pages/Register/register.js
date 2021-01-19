@@ -28,8 +28,8 @@ import av from '../../Assets/avatar.svg'
 		});
         return (
             <div>
-                <img className="wavex" alt="" src={bg}/>
-			<div className="containerx">
+                <img className="wave" alt="" src={bg}/>
+			<div className="container">
 				<div className="img">
 					<img src={al} alt=""/>
 				</div>
