@@ -1,131 +1,95 @@
 import React, { Component } from 'react'
+import './css/style.css'
+import bg from '../Register/images/wave.png'
+import al from '../Register/images/bg.svg'
+import {Link} from 'react-router-dom'
 
  class Register extends Component {
     render() {
+        const inputs = document.querySelectorAll('.input');
+
+
+		function focusFunc(){
+			let parent = this.parentNode.parentNode;
+			parent.classList.add('focus');
+		}
+
+		function blurFunc(){
+			let parent = this.parentNode.parentNode;
+			if(this.value === ""){
+				parent.classList.remove('focus');
+			}
+		}
+
+
+		inputs.forEach(input => {
+			input.addEventListener('focus', focusFunc);
+			input.addEventListener('blur', blurFunc);
+		});
         return (
-            <div className="container-fluid" style={{backgroundImage:`url(${"/Images/download.jpg"})`, height:670}}>
-                <div style={{paddingTop:80}}>
-
-                <div className="card  align-center shadow-lg rounded" style={{width:'50%',height:500,  margin:'0px auto',}}>
-                    <div className="card-header">
-                        <h1 className="register text-center">REGISTER</h1>
-                    </div>
-
-                    <div className="card-body">
-                        {/* <div className="row">
-                            <div className="col-6">
-                             <label for="uname">Username:</label>
-                            <input className="form-control form-control-lg" type="text" placeholder="First Name" aria-label=".form-control-lg example" />
-                            </div>
-
-                            <div className="col-6">
-                            <label className="form-label">Last Name</label>
-                            <input className="form-control form-control-lg" type="text" placeholder="Last Name" aria-label=".form-control-lg example" />
-                            </div>
-                        </div>
-
-                        <div className="row">
-                        <div className="col-6">
-                            <label className="form-label">Email Address</label>
-                            <input className="form-control form-control-lg" type="text" placeholder="name@example.com" aria-label=".form-control-lg example" />
-                        </div>
-                        <div className="col-6">
-                        <label className="form-label">Phone Number</label>
-                        <input className="form-control form-control-lg" type="number" placeholder="Phone number" aria-label=".form-control-lg example" />
-                        </div>
-                        </div>
-
-                        <div className="row">
-                        <div className="col-6">
-                            <label className="form-label">Business name</label>
-                            <input className="form-control form-control-lg" type="text" placeholder="Business name" aria-label=".form-control-lg example" />
-                            </div>
-                        <div className="col-6">
-                            <label className="form-label">Shop Address</label>
-                            <input className="form-control form-control-lg" type="text" placeholder="Shop Address" aria-label=".form-control-lg example" />
-                        </div>
-                        </div>
-
-                        <div className="row">
-                        <div className="col-6">
-                            <label className="form-label">Product Category</label>
-                            <input className="form-control form-control-lg" type="text" placeholder="Product Category" aria-label=".form-control-lg example" />
-                        </div>
-                        <div className="col-6">
-                            <label className="form-label">Social Handle</label>
-                            <input className="form-control form-control-lg" type="text" placeholder="Social Handle" aria-label=".form-control-lg example" />
-                        </div>
-                        </div>
-
-                        <div className="row">
-                        <div className="col-6">
-                            <label className="form-label">Password</label>
-                            <input className="form-control form-control-lg" type="text" placeholder="Password" aria-label=".form-control-lg example" />
-                        </div>
-                        <div className="col-6">
-                            <label className="form-label">Confirm Password</label>
-                            <input className="form-control form-control-lg" type="text" placeholder="Confirm Password" aria-label=".form-control-lg example" />
-                        </div>
-                        </div> */}
-
-                        <form>
-                        <div class="row">
-                            <div class="col mb-3">
-                             <label for="uname">First name:</label>
-                            <input type="text" class="form-control" id="email" placeholder="First Name" name="first name" />
-                            </div>
-                            <div class="col mb-3">
-                             <label for="uname">Last Name:</label>
-                            <input type="text" class="form-control" placeholder="Last Name" name="last name" />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col mb-3">
-                             <label for="uname">Email Address:</label>
-                            <input type="text" class="form-control" id="email" placeholder="@gmail.com" name="email" />
-                            </div>
-                            <div class="col mb-3">
-                             <label for="uname">Phone Number:</label>
-                            <input type="number" class="form-control" placeholder="Phone number" name="phone number" />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col mb-3">
-                             <label for="uname">Business Name:</label>
-                            <input type="text" class="form-control" id="email" placeholder="Business Name" name="Business name" />
-                            </div>
-                            <div class="col mb-3">
-                             <label for="uname">Shop Address:</label>
-                            <input type="text" class="form-control" placeholder="Shop Address" name="Shop Address" />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col mb-3">
-                             <label for="uname">Product Category:</label>
-                            <input type="text" class="form-control" id="email" placeholder="Product Category" name="Product category" />
-                            </div>
-                            <div class="col mb-3">
-                             <label for="uname">Social Handle:</label>
-                            <input type="text" class="form-control" placeholder="" name="social handle" />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col mb-3">
-                             <label for="uname">Password:</label>
-                            <input type="password" class="form-control" id="Password" placeholder="Choose a password" name="password" />
-                            </div>
-                            <div class="col mb-3">
-                             <label for="uname">Confirm Password:</label>
-                            <input type="password" class="form-control" placeholder="re-enter password" name="password" />
-                            </div>
-                        </div>
-                        </form>
-
-                        <a href="#" className="btn btn-primary btn-xl">SUBMIT</a>
-                        </div>
-                    </div>
-           </div>
-                 </div>
+            <div>
+                <img className="wavex" alt="" src={bg}/>
+			<div className="containerx">
+				<div className="img">
+					<img src={al} alt=""/>
+				</div>
+				<div className="login-content">
+					<form action={Register}>
+						<div className="input-div one">
+						<div className="i">
+								<i className="fas fa-user"></i>
+						</div>
+						<div className="div">
+								<input className="form-control border-top-0 border-left-0 border-right-0" type="text" placeholder="first_name" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
+						</div>
+						</div>
+                        <div className="input-div one">
+						<div className="i">
+								<i className="fas fa-user"></i>
+						</div>
+						<div className="div">
+								<input className="form-control border-top-0 border-left-0 border-right-0" type="text" placeholder="last_name" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
+						</div>
+						</div>
+                        <div className="input-div one">
+						<div className="i">
+								<i className="fas fa-phone"></i>
+						</div>
+						<div className="div">
+								<input className="form-control border-top-0 border-left-0 border-right-0" type="text" placeholder="phone_no" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
+						</div>
+						</div>
+                        <div className="input-div one">
+						<div className="i">
+								<i className="fas fa-envelope"></i>
+						</div>
+						<div className="div">
+								<input className="form-control border-top-0 border-left-0 border-right-0" type="text" placeholder="email" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
+						</div>
+						</div>
+						<div className="input-div pass">
+						<div className="i"> 
+								<i className="fas fa-lock"></i>
+						</div>
+						<div className="div">
+								<input className="form-control border-top-0 border-left-0 border-right-0" type="text" placeholder="password" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
+						</div>
+						</div>
+                        <div className="input-div pass">
+						<div className="i"> 
+								<i className="fas fa-lock"></i>
+						</div>
+						<div className="div">
+								<input className="form-control border-top-0 border-left-0 border-right-0" type="text" placeholder="password_confirmation" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
+						</div>
+						</div>
+        
+						<Link to="/login"><button style={{background:"#32be8f"}} type="button" className="btn btn-lg btn-block rounded-pill text-white">SUBMIT</button></Link>  
+                        
+					</form>
+				</div>
+			</div>
+            </div>
         )
     }
 }

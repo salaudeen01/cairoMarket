@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import yo from "../../image/yo.jpg"
 import Header from "../../Components/Header"
 import Sidebar from './sidebar'
+import { Link } from 'react-router-dom'
 // import user from "../../Images/user.jpg"
 
  class profile extends Component {
@@ -13,16 +14,16 @@ import Sidebar from './sidebar'
               <div className="row text-center page">
                 <Sidebar />
                 <div className="page col-sm-9">
-                  <div className="col-12 shadow-lg p-3 mb-5 bg-white rounded" style={{height:"600px", background:"white",borderRadius:"15px"}}>
-                    <div className="mb-2 text-center type="button class="btn btn-link" class="text-center" style={{marginLeft:"20px"}}>
-                    <h1><a href="#"> Edit Profile</a></h1>
+                  <div className="col-12 shadow-lg p-3 mb-5 bg-white rounded" style={{height:"700px", background:"white",borderRadius:"15px"}}>
+                    <div className="mb-2 text-center type="button class="btn btn-link"  style={{marginLeft:"0px"}}>
+                    <h1><Link to="#"> Edit Profile</Link></h1>
                   </div>
                   <br/>
                 <div className="card container" >
                   <div className="row text-center" style={{marginRight:"10px"}}>
-                    <img src={yo} class="rounded-circle" alt="..." style={{height:"100px", width:"100px"}}></img><br/>
-                    <span> <a href="#" class="btn btn-danger">Update Photo</a></span>
+                    <img src={yo} class="rounded-circle" alt="..." style={{height:"100px", width:"100px",margin:"10px 0px 10px 10px"}}></img>
                   </div>
+                  <button type="button" className="btn btn-primary" style={{width:"200px",marginBottom:"15px"}}>Update Photo</button>
                 </div>
                 <br/>
                 <div className="container col-sm-10"  style={{marginLeft:"90px"}}>

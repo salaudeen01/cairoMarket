@@ -1,5 +1,5 @@
 import React from 'react'
-import user from '../../images/user.jpg'
+import user from '../../Images/user.jpg'
 
 export default function Sidebar() {
     return (
