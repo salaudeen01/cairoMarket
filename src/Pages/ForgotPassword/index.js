@@ -45,51 +45,50 @@ import {Link} from 'react-router-dom'
 
 export class ForgotPassword extends Component {
 	render() {
-		// const inputs = document.querySelectorAll('.input');
+		 const inputs = document.querySelectorAll('.input');
 
 
-		// function focusFunc(){
-		// 	let parent = this.parentNode.parentNode;
-		// 	parent.classList.add('focus');
-		// }
+		 function focusFunc(){
+		 	let parent = this.parentNode.parentNode;
+		 	parent.classList.add('focus');
+		 }
 
-		// function blurFunc(){
-		// 	let parent = this.parentNode.parentNode;
-		// 	if(this.value === ""){
-		// 		parent.classList.remove('focus');
-		// 	}
-		// }
+		 function blurFunc(){
+		 	let parent = this.parentNode.parentNode;
+		 	if(this.value === ""){
+		 		parent.classList.remove('focus');
+		 	}
+		 }
 
 
-		// inputs.forEach(input => {
-		// 	input.addEventListener('focus', focusFunc);
-		// 	input.addEventListener('blur', blurFunc);
-		// });
+		 inputs.forEach(input => {
+		 	input.addEventListener('focus', focusFunc);
+		 	input.addEventListener('blur', blurFunc);
+		 });
 		return (
 		<div>	
-			<img className="wavex" src={bg} alt=".."/>
-			<div className="containerx">
-				<div className="imgx">
+			<img className="wave" src={bg} alt=".."/>
+			<div className="container">
+				<div className="img">
 					<img src={forgotPassword} alt=".." />
 				</div>
-				<div className="login-contentx">
-                
-                 <div className="card text-center" style={{borderColor:'white',width:580,backgound:'transparent',height:300 }}>
-                  <div class="card-body">
+				<div className="login-content">
+				<form className="fx" action="index.js">
                          <h2 class="card-title">Forgot Your Password? <span className="fa fa-comment-o"/></h2>
-                        
                          <p  className="text-dark px-2">Input your email or phone number below to regain your lost password!</p>
-						 <div className="inputx-divx onex">
-						<div className="ix">
+						 <div className="input-div one">
+						<div className="i">
 								<i className="fas fa-envelope"></i>
 						</div>
-						<div className="divx">
+						<div className="div">
 						<input className="form-control border-top-0 border-left-0 border-right-0" type="email" placeholder="Email/Phone number" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
 						</div>
 						</div>
+						
                              <Link to="#"><button style={{background:"#32be8f"}} type="button" className="btn btn-lg btn-block rounded-pill text-white">SUBMIT</button></Link>  
-                    </div>
-        </div>
+                    
+        
+		</form>
 				</div>
 			</div>
 		</div>

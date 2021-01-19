@@ -9,7 +9,7 @@ body{
     overflow: hidden;
 }
 
-.wavex{
+.wave{
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -17,7 +17,7 @@ body{
 	z-index: -1;
 }
 
-.containerx{
+.container{
     width: 100vw;
     height: 100vh;
     display: grid;
