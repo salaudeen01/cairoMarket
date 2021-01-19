@@ -3,7 +3,7 @@ import './css/style.css'
 import bg from '../Register/images/wave.png'
 import al from '../Register/images/bg.svg'
 import {Link} from 'react-router-dom'
-
+import av from '../../Assets/avatar.svg'
  class Register extends Component {
     render() {
         const inputs = document.querySelectorAll('.input');
@@ -35,6 +35,8 @@ import {Link} from 'react-router-dom'
 				</div>
 				<div className="login-content">
 					<form action={Register}>
+				<img className="avatar" src={av} alt=".."/>
+						<h2>Welcome</h2>
 						<div className="input-div one">
 						<div className="i">
 								<i className="fas fa-user"></i>
@@ -72,7 +74,7 @@ import {Link} from 'react-router-dom'
 								<i className="fas fa-lock"></i>
 						</div>
 						<div className="div">
-								<input className="form-control border-top-0 border-left-0 border-right-0" type="text" placeholder="password" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
+								<input className="form-control border-top-0 border-left-0 border-right-0" type="password" placeholder="password" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
 						</div>
 						</div>
                         <div className="input-div pass">
@@ -80,7 +82,7 @@ import {Link} from 'react-router-dom'
 								<i className="fas fa-lock"></i>
 						</div>
 						<div className="div">
-								<input className="form-control border-top-0 border-left-0 border-right-0" type="text" placeholder="password_confirmation" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
+								<input className="form-control border-top-0 border-left-0 border-right-0" type="password" placeholder="password_confirmation" style={{ fontFamily:"san-serif", fontWeight:"bold", fontSize:"17px"}}/>
 						</div>
 						</div>
         
