@@ -14,7 +14,46 @@ import Footer from '../../Components/Footer'
 import Header from '../../Components/Header'
 
 export class Dashboard2 extends Component {
+    constructor(props){
+        super(props)
+        const user = JSON.parse(localStorage.getItem("user"))
+        const token = user && user.token
+        this.state={
+            allCategories:[],
+            token
+        }
+    }
+    componentDidMount(){
+        this.fetchAllCategory()
+    }
+
+    fetchAllCategory =()=>{
+        const requestOptions={
+            method:"GET",
+            headers:{
+                "Content-Type":"application/json",
+                ...{"Authorization":"Bearer" +this.state.token}
+            }
+        }
+        fetch("http://142.93.152.229/cairo/api/fetch_categories", requestOptions)
+    .then(async res=>{
+      const data = await res.json()
+      this.setState({allCategories:data})
+    //   if(data.status_code===401){
+        // logout()
+    //   }
+      console.log(data)
+        return data
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+  }
+
+    
+
     render() {
+        // const{ allCategories}=this.state
         return (
             <div>
                 <Header color="black" />
@@ -77,7 +116,8 @@ export class Dashboard2 extends Component {
                             </div>
                             <div className="col-sm-6 top-nav">
                                 <ul>
-                                    <li><Link className="btn btn-outline-info dice"><span className="fa fa-plus" /> Upload</Link></li>
+                                    {/* <li><Link className="btn btn-outline-info dice"><span className="fa fa-plus" /> Upload</Link></li> */}
+                                    <h1><a href="#exampleModal" data-toggle="modal" class="btn btn-otuline-info dice"><span className="fa fa-plus"/>Upload Products</a></h1>
                                     <li><Link><img src={user} alt="user"/></Link></li>
                                 </ul>
                             </div>
@@ -162,6 +202,55 @@ export class Dashboard2 extends Component {
                 </div>
                 </div>
                 <Footer />
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Products</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form  >
+                        <div class="form-group">
+                            <label   label for="product_image">Product Image</label>
+                                <input type="file" class="form-control" name="product_image" required />
+                        </div>
+                        <div className="form-group">
+                            <label for="product_name">Product Name</label>
+                                <input type="text" class="form-control"  name="product_name" required />
+                        </div>
+                        <div className="form-group">
+                            <label for="description">Description</label>
+                                <input type="text" class="form-control"  name="description" required />
+                        </div>
+                        <div className="form-group">
+                            <label for="price">Price</label>
+                                <input type="number" class="form-control"  name="price" required />
+                        </div>
+                        <div className="form-group">
+                        <label for="category">Category</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select Category</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        </div>
+ 
+                        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         {/* <button type="button" name="save" class="btn btn-primary">Save changes</button>  */}
+        <input type="submit" value="Submit" name="save" class="btn btn-primary" />
+      </div>
+    
+    </div>
+  </div>
+</div>
             </div>
         )
     }

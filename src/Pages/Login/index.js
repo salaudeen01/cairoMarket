@@ -5,6 +5,7 @@ import av from '../../Assets/avatar.svg'
 import al from '../../Assets/bg.svg'
 import {Link} from 'react-router-dom'
 
+
 export class Index extends Component {
 	render() {
 		 const inputs = document.querySelectorAll('.input');
