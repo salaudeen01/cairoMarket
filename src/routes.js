@@ -11,13 +11,15 @@ const Contact = React.lazy(() => import('./Pages/Contact'));
 const profile = React.lazy(() => import('./Pages/Profile'));
 const Blog = React.lazy(() => import('./Pages/Blog'));
 const event = React.lazy(() => import('./Pages/Event/event'));
-const eventdetails = React.lazy(() => import('./Pages/Event/eventdetails'))
+const eventdetails = React.lazy(() => import('./Pages/Event/eventdetails'));
+const verifyEmail = React.lazy(() => import ('./Pages/verifyemail/verifyEmail'));
 
 const routes = [
   { path: '/', exact: true, name: 'Landing', layout:"MinimalLayout"},
   { path: '/landing', name: 'Landing', component: Landing, layout:"MinimalLayout" },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard, layout:"MainLayout" },
   { path: '/login', name: 'Login', component: Login, layout:"MinimalLayout" },
+  { path:  '/verify_email/:id', name:'verifyEmail', component:verifyEmail, layout:"MinimalLayout"},
   { path: '/register', name: 'Register', component: Register, layout:"MinimalLayout" },
   { path: '/forgotPassword', name: 'ForgotPassword', component: ForgotPassword, layout:"MinimalLayout" },
   { path: '/page404', name: 'Page404', component: Page404, layout:"MinimalLayout" },
