@@ -50,29 +50,6 @@ const register =(userData) =>
 		e.preventDefault()
 		register(data)
 	  }
-	
-
-
-        // const inputs = document.querySelectorAll('.input');
-
-
-		// function focusFunc(){
-		// 	let parent = this.parentNode.parentNode;
-		// 	parent.classList.add('focus');
-		// }
-
-		// function blurFunc(){
-		// 	let parent = this.parentNode.parentNode;
-		// 	if(this.value === ""){
-		// 		parent.classList.remove('focus');
-		// 	}
-		// }
-
-
-		// inputs.forEach(input => {
-		// 	input.addEventListener('focus', focusFunc);
-		// 	input.addEventListener('blur', blurFunc);
-		// });
         return (
             <div>
                 <img className="wave" alt="" src={bg}/>
@@ -136,7 +113,7 @@ const register =(userData) =>
 					<button style={{background:"#32be8f"}} type="submit" className="btn btn-lg btn-block rounded-pill text-white" >SUBMIT
 						{/* <span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span> */}
   						{/* <span class="visually-hidden">Loading...</span> */}
-						  <span className="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span>
+						  <span className="spinner-border spinner-border-lg" id="spinner" role="status" aria-hidden="true"></span>
   Loading..
 					</button>  
                         

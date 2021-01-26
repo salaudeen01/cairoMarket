@@ -12,11 +12,13 @@ import img7 from '../../Images/img7.jpg'
 import img8 from '../../Images/img8.jpg'
 import Footer from '../../Components/Footer'
 import Header from '../../Components/Header'
+import {history} from '../../history'
 
 export class Dashboard2 extends Component {
     constructor(props){
         super(props)
-        const user = JSON.parse(localStorage.getItem("user"))
+        const user = JSON.parse(localStorage.getItem("data"))
+        console.log(user)
         const token = user && user.token
         this.state={
             allCategories:[],
@@ -25,6 +27,7 @@ export class Dashboard2 extends Component {
     }
     componentDidMount(){
         this.fetchAllCategory()
+        this.fetchProfile()
     }
 
     fetchAllCategory =()=>{
@@ -32,34 +35,69 @@ export class Dashboard2 extends Component {
             method:"GET",
             headers:{
                 "Content-Type":"application/json",
-                ...{"Authorization":"Bearer" +this.state.token}
+                ...{"Authorization":"Bearer " +this.state.token}
             }
         }
-        fetch("http://142.93.152.229/cairo/api/fetch_categories", requestOptions)
+    fetch("http://142.93.152.229/cairo/api/fetch_categories", requestOptions)
     .then(async res=>{
       const data = await res.json()
       this.setState({allCategories:data})
-    //   if(data.status_code===401){
-        // logout()
-    //   }
+      if(data.status_code===401) history.push("/login")
       console.log(data)
-        return data
     })
     .catch(err=>{
+        if(err==="Unauthorized"){
+            history.push("/login")
+        }
         console.log(err)
     })
-  }
+}
 
+fetchProfile=()=>{
+    const board = JSON.parse(localStorage.getItem('data'))
+    const baseUrl = "http://142.93.152.229/cairo/api/fetch_profile?token="
+
+    const attach = {
+        method: 'GET',
+        headers: {'authorization': 'Bearer '+board.token}
+    }
+    const splash = document.getElementById("splash")
     
+    const user_profile = JSON.parse(localStorage.getItem('profile'))
+    if(user_profile){
+        splash.innerHTML="Welcome "+ user_profile.first_name
+    }else{
+        fetch(baseUrl , attach).then(async res=>{
+            let status
+            const profileData = await res.json();
+            const dataArr = profileData[0]
+            localStorage.setItem('profile',JSON.stringify(dataArr))
+            if(profileData){
+                splash.innerHTML="Welcome "+ dataArr.first_name
+            }else{
+                console.log(status = false)
+            }
+    
+        }).catch(err=>{
+            alert(err + " connection error, pls fix.")
+        })
+    }
+}
 
     render() {
-        // const{ allCategories}=this.state
+       const details = JSON.parse(localStorage.getItem('profile'))
+
+       console.log(details)
         return (
+
             <div>
                 <Header color="black" />
+                
                  {/* Inne Page Banner Area Start Here  */}
         <section className="inner-page-banner bg-common inner-page-top-margin overlay-dark-40" data-bg-image="img/figure/inner-page-banner1.jpg">
-            <div className="container">
+           <div className="container">
+        <h4 className="alert-success text-center" style={{width:'100%'}} id="splash"></h4>
+
                 <div className="row">
                     <div className="col-12">
                         <div className="breadcrumbs-area">
@@ -84,7 +122,7 @@ export class Dashboard2 extends Component {
                    
                       <div className='user'><span className="badge"><img src={user} alt="users images" /><a href="edit"><i className="fa fa-edit"/></a></span></div>
                       <div className="sidebar-text"><br/>
-                        <h4><span className="fa fa-user"/>  Williams Blonde</h4>
+                        <h4><span className="fa fa-user"/> {details && details.first_name}</h4>
                         <br/>
                         <h5>fullstack web developer,</h5>
                         <h5>CEO @Tristack inc.</h5>
@@ -92,8 +130,8 @@ export class Dashboard2 extends Component {
                         <Link to ="/profile"><span className="btn btn-outline-primary ">Edit profile</span></Link>
                         <hr/>
                         <h3>Contacts:</h3>
-                        <h6><a href="mailto:#"><span className="fa fa-envelope" /> williamsBlonde@gmail</a></h6>
-                        <h6><a href="tel:#"><span className="fa fa-phone" />  +2347063205787</a></h6>
+                        <h6><a href={`mailto:${details && details.email}`}><span className="fa fa-envelope" /> {details && details.email}</a></h6>
+                        <h6><a href={`tel:${details && details.phone_no}`}><span className="fa fa-phone" />  {details && details.phone_no}</a></h6>
                         <h5><span className="fa fa-map-marker" />  19 olasoji ln cairo market oshoji isolo lagos.</h5>
                         <br/>
                         <div className="sidebar-social">
@@ -233,10 +271,18 @@ export class Dashboard2 extends Component {
                         <div className="form-group">
                         <label for="category">Category</label>
                         <select class="form-select" aria-label="Default select example">
+
                             <option selected>Select Category</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            {this.state.allCategories.map(cat=>( 
+                                 <option value={cat.category_name} key={cat.id}>{cat.category_name}</option> 
+                             ))}
+                            {/* {this.state.allCategories.map(cat=>{
+                                const {category_name, id} = cat
+                                return(
+                                <option value={category_name} key={id}>{category_name}</option>
+                            )})} */}
+                            {/* <option value="2">Two</option>
+                            <option value="3">Three</option> */}
                         </select>
                         </div>
  
